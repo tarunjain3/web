@@ -11,22 +11,28 @@
       <style>
       .list{
         border: 1px solid black;
+      border-left:0px;
       }
       	.display{
       		width: 100%;
     		height: 100px;
-    		border-radius: 150px;
 
       	}
       	.display:hover{
-      		border:4px solid yellow;
-      		box-shadow: 3px 3px orange;
+      		border:3px solid indigo;
       	}
+        .info{
+          padding: 10px;
+
+        }
+        .leftborder{
+          border-left: 1px solid black;
+        }
 
       </style>
 </head>
 <body >
-	<nav class="nav-wrapper red lighten-1">
+	<nav class="nav-wrapper indigo">
     	<div class="container">
      		 <a href="#" class="brand-logo">Robotics</a>
       		 <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
@@ -58,15 +64,43 @@
  	<div class="container">
      <div class="row" style="margin: 25px;">
       <div class="col s6 m4 l4 left" ><a class="dropdown-trigger btn-large right" id="dropdown-button" href='#' data-target='dropdown1' ><span style="padding:50px;">Components</span></a></div>
-      <div class="col s6 m8 l8"><input type="text" placeholder="&nbsp &nbsp what are you looking for...?" style="background:transparent;outline:0;border:1px solid black; padding:4px; font-color:black;"></div>
+      <div class="col s6 m8 l8"><input type="text" placeholder="Search" style="background:transparent;outline:0;border:1px solid black; padding:4px; font-color:black;"></div>
      </div>
     </div>
 
-    <!--display img-->
-  
-    	<div class="row">
-    		<div class="col s12 m12 l12" ><img class="responsive-img hoverable display" src="display.jpg"></div>
-    	</div>
+    <!--display slider-->
+    <div class="slider container-fluid">
+    <ul class="slides">
+      <li>
+        <img src="display.jpg" class="display">
+        <div class="caption center-align">
+          <h2 class="black-text">Robotics Lab</h2>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/2" class="display"> <!-- random image -->
+        <div class="caption left-align">
+          <h3>E-yantra Lab</h3>
+          <h5 class="light grey-text text-lighten-3" class=" display">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/3" class="display"> <!-- random image -->
+        <div class="caption right-align">
+          <h3>U.I.E.T Welcomes you</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+      <li>
+        <img src="https://lorempixel.com/580/250/nature/4" class="display"> <!-- random image -->
+        <div class="caption center-align">
+          <h3>This is our big Tagline!</h3>
+          <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+        </div>
+      </li>
+    </ul>
+  </div>
     
 
     <!--list/yo grid-->
@@ -74,42 +108,202 @@
           <!--1st row-->  
      <div class="container">
      	<div class="row">
-     		<div class="col s12 m12 l12 center-align"> <h4><a id="2"></a>Motors</h4></div>
+     		<div class="col s12 m12 l12 center-align"> <h4><a id="motors"></a>Motors</h4></div>
      	</div>
      	<div class="row" >
-			<div class="col s6 m3 l3 xl3 list">
-				<div>
-					<a><img class="responsive-img hoverable" src="dc motor.jpg"></a>
+			<div class="col s6 m3 l3 xl3 list leftborder">
+        <div class="center-align">
+          <h6>DC motor</h6>
+        </div>
+        <div>
+					<a href="#popupa" class="modal-trigger"><img class="responsive-img hoverable" src="dc motor.jpg"></a>
 				</div>
-				<div class="center-align">
-					<h6>DC motor</h6>
-				</div>
+        
+                  <!--modal-->
+
+        <div class="center-align info">
+        <a href="#" class="btn indigo lighten-2 " >info</a>
+          <div class="modal" id="popupa">
+            <div class="modal-content">
+             
+
+              <div class="modal-footer">
+                <a href="#" class="btn red-text white btn-small modal-close"><i class="material-icons">close</i></a>
+              </div>
+              <div class="row">
+                <div class="col s4 m4 l4 xl4 ">
+                  <div>
+                    <img class="responsive-img" src="dc motor.jpg" style="border: 1px solid black;">
+                  </div>
+                  <div>
+                    <h5>DC motor</h5>
+                  </div>
+                </div>
+                <div class="col s8 m8 l8 xl8"> 
+                  <div style="margin: 0px 0px 25px 0px;">
+                    <h5>Discription</h5><hr>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteu lorem r sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#" class="btn indigo left">Data Sheet</a>
+                      <a href="#" class="btn indigo"> issue</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
 			</div>
 			<div class="col s6 m3 l3 xl3 list">
+        <div class="center-align">
+          <h6>Gear motor</h6>
+        </div>
 				<div>
-					<a><img class="responsive-img hoverable" src="gear motor.jpg"></a>
+					<a href="#popupb" class="modal-trigger"><img class="responsive-img hoverable" src="gear motor.jpg"></a>
 				</div>
-				<div class="center-align">
-					<h6>Gear motor</h6>
-				</div>
+				 <div class="center-align info">
+        <a href="#" class="btn indigo lighten-2" >info</a>
+          <div class="modal" id="popupb">
+            <div class="modal-content">
+             
+
+              <div class="modal-footer">
+                <a href="#" class="btn red-text white btn-small modal-close"><i class="material-icons">close</i></a>
+              </div>
+              <div class="row">
+                <div class="col s4 m4 l4 xl4 ">
+                  <div>
+                    <img class="responsive-img" src="gear motor.jpg" style="border: 1px solid black;">
+                  </div>
+                  <div>
+                    <h5>Gear Motor</h5>
+                  </div>
+                </div>
+                 <div class="col s8 m8 l8 xl8"> 
+                  <div style="margin: 0px 0px 25px 0px;">
+                    <h5>Discription</h5><hr>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteu lorem r sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#" class="btn indigo left">Data Sheet</a>
+                      <a href="#" class="btn indigo"> issue</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
 			</div>
      		<div class="col s6 m3 l3 xl3 list">
+          <div class="center-align">
+            <h6>BO motor</h6>
+          </div>
      			<div>
-     				<a><img class="responsive-img hoverable" src="bo motors.jpg"></a>
+     				<a href="#popupc" class="modal-trigger"><img class="responsive-img hoverable" src="bo motors.jpg"></a>
      			</div>
-     			<div class="center-align">
-     				<h6>BO motor</h6>
-     			</div>
+
+        <div class="center-align info">
+        <a href="#" class="btn indigo lighten-2" >info</a>
+          <div class="modal" id="popupc">
+            <div class="modal-content">
+             
+
+              <div class="modal-footer">
+                <a href="#" class="btn red-text white btn-small modal-close"><i class="material-icons">close</i></a>
+              </div>
+              <div class="row">
+                <div class="col s4 m4 l4 xl4 ">
+                  <div>
+                    <img class="responsive-img" src="bo motors.jpg" style="border: 1px solid black;">
+                  </div>
+                  <div>
+                    <h5>BO motor</h5>
+                  </div>
+                </div>
+                <div class="col s8 m8 l8 xl8"> 
+                  <div style="margin: 0px 0px 25px 0px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteu lorem r sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                   </div>
+                  <div class="modal-footer">
+                    <a href="#" class="btn indigo left">Data Sheet</a>
+                      <a href="#" class="btn indigo"> issue</a>
+                  </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+     			
      		</div>
      		<div class="col s6 m3 l3 xl3 list">
-     			<div>
-     				<a><img class="responsive-img hoverable " src="ac motor.jpg"></a>
+          <div class="center-align">
+            <h6>
+              AC motor
+            </h6>
+          </div><div>
+     				<a href="#popupd" class="modal-trigger"><img class="responsive-img hoverable " src="ac motor.jpg"></a>
      			</div>
-     			<div class="center-align">
-     				<h6>
-     					AC motor
-     				</h6>
-     			</div>
+     			
+
+        <div class="center-align info">
+        <a href="#" class="btn indigo lighten-2" >info</a>
+          <div class="modal" id="popupd">
+            <div class="modal-content">
+             
+
+              <div class="modal-footer">
+                <a href="#" class="btn red-text white btn-small modal-close"><i class="material-icons">close</i></a>
+              </div>
+              <div class="row">
+                <div class="col s4 m4 l4 xl4 ">
+                  <div>
+                    <img class="responsive-img" src="ac motor.jpg" style="border: 1px solid black;">
+                  </div>
+                  <div>
+                    <h5>AC motor</h5>
+                  </div>
+                </div>
+                <div class="col s8 m8 l8 xl8"> 
+                  <div style="margin: 0px 0px 25px 0px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteu lorem r sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                </div>
+                  <div class="modal-footer">
+                    <a href="#" class="btn indigo left">Data Sheet</a>
+                      <a href="#" class="btn indigo"> issue</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
      	</div>
      </div>
    </div>
@@ -120,74 +314,381 @@
      		<div class="col s12 m12 l12 center-align "> <h4><a id="robotics"></a>Robotics</h4></div>
      	</div>
      	<div class="row" >
-			<div class="col s6 m3 l3 xl3 list">
-				<div>
-					<img class="responsive-img hoverable" src="12v battery.jpg">
+			<div class="col s6 m3 l3 xl3 list leftborder">
+				
+        <div class="center-align">
+          <h6>12V Battery</h6>
+        </div>
+        <div >
+					<a href="#popupe" class="modal-trigger"><img class="responsive-img hoverable" src="12v battery.jpg"></a>
 				</div>
-				<div class="center-align">
-					<h6>12V Battery</h6>
-				</div>
+				
+
+        <div class="center-align info">
+        <a href="#popupe" class="btn indigo lighten-2" >info</a>
+          <div class="modal" id="popupe">
+            <div class="modal-content">
+             
+
+              <div class="modal-footer">
+                <a href="#" class="btn red-text white btn-small modal-close"><i class="material-icons">close</i></a>
+              </div>
+              <div class="row">
+                <div class="col s4 m4 l4 xl4 ">
+                  <div>
+                    <img class="responsive-img" src="12v battery.jpg" style="border: 1px solid black;">
+                  </div>
+                   <div>
+                    <h5>12V Battery</h5>
+                  </div>
+                 
+                </div>
+                 <div class="col s8 m8 l8 xl8"> 
+                  <div style="margin: 0px 0px 25px 0px;">
+                    <h5>Discription</h5><hr>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteu lorem r sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#" class="btn indigo left">Data Sheet</a>
+                      <a href="#" class="btn indigo"> issue</a>
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
 			</div>
 			<div class="col s6 m3 l3 xl3 list">
-				<div>
-					<img class="responsive-img hoverable" src="gear.jpg">
+				 <div class="center-align">
+          <h6>Gear</h6>
+        </div>
+        <div>
+					<a href="#popupf" class="modal-trigger"><img class="responsive-img hoverable" src="gear.jpg"></a>
 				</div>
-				<div class="center-align">
-					<h6>Gear</h6>
-				</div>
+
+
+        <div class="center-align info">
+        <a href="#" class="btn indigo lighten-2" >info</a>
+          <div class="modal" id="popupf">
+            <div class="modal-content">
+             
+
+              <div class="modal-footer">
+                <a href="#" class="btn red-text white btn-small modal-close"><i class="material-icons">close</i></a>
+              </div>
+              <div class="row">
+                <div class="col s4 m4 l4 xl4 ">
+                  <div>
+                    <img class="responsive-img" src="gear.jpg" style="border: 1px solid black;">
+                  </div>
+                  <div>
+                    <h5>Gear</h5>
+                  </div>
+                </div>
+                <div class="col s8 m8 l8 xl8"> 
+                  <div style="margin: 0px 0px 25px 0px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteu lorem r sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#" class="btn indigo left">Data Sheet</a>
+                      <a href="#" class="btn indigo"> issue</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
 			</div>
      		<div class="col s6 m3 l3 xl3 list">
-     			<div>
-     				<img class="responsive-img hoverable" src="pulley.jpg">
-     			</div> 
      			<div class="center-align">
-     				<h6>Pulley</h6>
-     			</div>
+            <h6>Pulley</h6>
+          </div>
+          <div>
+     				<a href="#popupg" class="modal-trigger"><img class="responsive-img hoverable" src="pulley.jpg"></a>
+     			</div> 
+     			
+
+        <div class="center-align info">
+        <a href="#" class="btn indigo lighten-2" >info</a>
+          <div class="modal" id="popupg">
+            <div class="modal-content">
+             
+
+              <div class="modal-footer">
+                <a href="#" class="btn red-text white btn-small modal-close"><i class="material-icons">close</i></a>
+              </div>
+              <div class="row">
+                <div class="col s4 m4 l4 xl4 ">
+                  <div>
+                    <img class="responsive-img" src="pulley.jpg" style="border: 1px solid black;">
+                  </div>
+                  <div>
+                    <h5>Pulley</h5>
+                  </div>
+                </div>
+                <div class="col s8 m8 l8 xl8"> 
+                  <div style="margin: 0px 0px 25px 0px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteu lorem r sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#" class="btn indigo left">Data Sheet</a>
+                      <a href="#" class="btn indigo"> issue</a>
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
      		</div>
      		<div class="col s6 m3 l3 xl3 list">
-     			<div>
-     				<img class="responsive-img hoverable" src="wheel.jpg">
-     			</div>
      			<div class="center-align">
-     				<h6>Wheel</h6>
+            <h6>Wheel</h6>
+          </div>
+          <div>
+     				<a href="#popuph" class="modal-trigger"><img class="responsive-img hoverable" src="wheel.jpg"></a>
      			</div>
+     			
+
+        <div class="center-align info">
+        <a href="#" class="btn indigo lighten-2" >info</a>
+          <div class="modal" id="popuph">
+            <div class="modal-content">
+             
+
+              <div class="modal-footer">
+                <a href="#" class="btn red-text white btn-small modal-close"><i class="material-icons">close</i></a>
+              </div>
+              <div class="row">
+                <div class="col s4 m4 l4 xl4 ">
+                  <div>
+                    <img class="responsive-img" src="wheel.jpg" style="border: 1px solid black;">
+                  </div>
+                  <div>
+                    <h5>Wheel</h5>
+                  </div>
+                </div>
+                <div class="col s8 m8 l8 xl8"> 
+                  <div style="margin: 0px 0px 25px 0px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteu lorem r sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#" class="btn indigo left">Data Sheet</a>
+                      <a href="#" class="btn indigo"> issue</a>
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
      	</div>
      </div>
  </div>
  			<!--2nd row continued-->  
      <div class="container">
      	<div class="row" >
-			<div class="col s6 m3 l3 xl3 list">
-				<div>
-					<img class="responsive-img hoverable" src="robotics mechanical.jpg">
-				</div>
+			<div class="col s6 m3 l3 xl3 list leftborder">
 				<div class="center-align">
-					<h6>Mechanical</h6>
+          <h6>Mechanical</h6>
+        </div>
+        <div>
+					<a href="#popupi" class="modal-trigger"><img class="responsive-img hoverable" src="robotics mechanical.jpg"></a>
 				</div>
+        <div class="center-align info">
+        <a href="#" class="btn indigo lighten-2">info</a>
+          <div class="modal" id="popupi">
+            <div class="modal-content">
+             
+
+              <div class="modal-footer">
+                <a href="#" class="btn red-text white btn-small modal-close"><i class="material-icons">close</i></a>
+              </div>
+              <div class="row">
+                <div class="col s4 m4 l4 xl4 ">
+                  <div>
+                    <img class="responsive-img" src="robotics mechanical.jpg" style="border: 1px solid black;">
+                  </div>
+                  <div>
+                    <h5>Mechanical</h5>
+                  </div>
+                </div>
+                <div class="col s8 m8 l8 xl8"> 
+                  <div style="margin: 0px 0px 25px 0px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#" class="btn indigo left">Data Sheet</a>
+                      <a href="#" class="btn indigo"> issue</a>
+                  </div>
+               
+              </div>
+            </div>
+          </div>
+        </div>
 			</div>
 			<div class="col s6 m3 l3 xl3 list">
-				<div>
-					<img class="responsive-img hoverable" src="cables.jpg">
-				</div>
 				<div class="center-align">
-					<h6>Cables</h6>
+          <h6>Cables</h6>
+        </div>
+        <div>
+					<a href="#popupj" class="modal-trigger"><img class="responsive-img hoverable" src="cables.jpg"></a>
 				</div>
+
+        <div class="center-align info">
+        <a href="#popup" class="btn indigo lighten-2" >info</a>
+          <div class="modal" id="popupj">
+            <div class="modal-content">
+             
+
+              <div class="modal-footer">
+                <a href="#" class="btn red-text white btn-small modal-close"><i class="material-icons">close</i></a>
+              </div>
+              <div class="row">
+                <div class="col s4 m4 l4 xl4 ">
+                  <div>
+                    <img class="responsive-img" src="cables.jpg" style="border: 1px solid black;">
+                  </div>
+                  <div>
+                    <h5>Cables</h5>
+                  </div>
+                </div>
+                <div class="col s8 m8 l8 xl8"> 
+                  <div style="margin: 0px 0px 25px 0px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteu lorem r sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#" class="btn indigo left">Data Sheet</a>
+                      <a href="#" class="btn indigo"> issue</a>
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
 			</div>
      		<div class="col s6 m3 l3 xl3 list">
-     			<div>
-     				<img class="responsive-img hoverable" src="electromechanical.jpg">
+     		<div class="center-align">
+            <h6>Electromechanical</h6>
+        </div>
+        	<div>
+     				<a href="#popupk" class="modal-trigger"><img class="responsive-img hoverable" src="electromechanical.jpg"></a>
      			</div>
-     			<div class="center-align">
-     				<h6>Electromechanical</h6>
-     			</div>
+     			
+        <div class="center-align info">
+        <a href="#" class="btn indigo lighten-2" >info</a>
+          <div class="modal" id="popupk">
+            <div class="modal-content">
+             
+
+              <div class="modal-footer">
+                <a href="#" class="btn red-text white btn-small modal-close"><i class="material-icons">close</i></a>
+              </div>
+              <div class="row">
+                <div class="col s4 m4 l4 xl4 ">
+                  <div>
+                    <img class="responsive-img" src="electromechanical.jpg" style="border: 1px solid black;">
+                  </div>
+                  <div>
+                    <h5>Electromechanical</h5>
+                  </div>
+                </div>
+                <div class="col s8 m8 l8 xl8"> 
+                  <div style="margin: 0px 0px 25px 0px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteu lorem r sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#" class="btn indigo left">Data Sheet</a>
+                      <a href="#" class="btn indigo"> issue</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
      		</div>
      		<div class="col s6 m3 l3 xl3 list">
-     			<div>
-     				<img class="responsive-img hoverable" src="chasis.jpg">
-     			</div>
      			<div class="center-align">
-     				<h6>Chassis</h6>
+            <h6>Chassis</h6>
+          </div>
+          <div>
+     				<a href="#popupl" class="modal-trigger"><img class="responsive-img hoverable" src="chasis.jpg"></a>
      			</div>
+     			
+
+        <div class="center-align info">
+        <a href="#" class="btn indigo lighten-2" >info</a>
+          <div class="modal" id="popupl">
+            <div class="modal-content">
+             
+
+              <div class="modal-footer">
+                <a href="#" class="btn red-text white btn-small modal-close"><i class="material-icons">close</i></a>
+              </div>
+              <div class="row">
+                <div class="col s4 m4 l4 xl4 ">
+                  <div>
+                    <img class="responsive-img" src="chasis.jpg" style="border: 1px solid black;">
+                  </div>
+                  <div>
+                    <h5>chassis</h5>
+                  </div>
+                </div>
+                <div class="col s8 m8 l8 xl8"> 
+                  <div style="margin: 0px 0px 25px 0px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteu lorem r sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#" class="btn indigo left">Data Sheet</a>
+                      <a href="#" class="btn indigo"> issue</a>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
      	</div>
      </div>
  </div>
@@ -197,61 +698,228 @@
      		<div class="col s12 m12 l12 center-align"> <h4><a id="arduino"></a>Arduino</h4></div>
      	</div>
      	<div class="row" >
-			<div class="col s6 m3 l3 xl3 list">
-				<div>
-					<img class="responsive-img hoverable" src="arduino nano.jpg">
-				</div>
+			<div class="col s6 m3 l3 xl3 list leftborder">
 				<div class="center-align">
-					<h6>Nano</h6>
+          <h6>Nano</h6>
+        </div>
+        <div>
+					<a href="#popupm" class="modal-trigger"><img class="responsive-img hoverable" src="arduino nano.jpg"></a>
+				</div>
+				
+					
+          <div class="center-align">
+        <div class="center-align info">
+        <a href="#" class="btn indigo lighten-2" >info</a>
+          <div class="modal" id="popupm">
+            <div class="modal-content">
+             
+
+              <div class="modal-footer">
+                <a href="#" class="btn red-text white btn-small modal-close"><i class="material-icons">close</i></a>
+              </div>
+              <div class="row">
+                <div class="col s4 m4 l4 xl4 ">
+                  <div>
+                    <img class="responsive-img" src="arduino nano.jpg" style="border: 1px solid black;">
+                  </div>
+                  <div>
+                    <h5>Nano</h5>
+                  </div>
+                </div>
+                <div class="col s8 m8 l8 xl8"> 
+                  <div style="margin: 0px 0px 25px 0px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteu lorem r sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#" class="btn indigo left">Data Sheet</a>
+                      <a href="#" class="btn indigo"> issue</a>
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
 				</div>
 			</div>
 			<div class="col s6 m3 l3 xl3 list">
-				<div>
-					<img class="responsive-img hoverable" src="arduino uno.jpg">
-				</div>
 				<div class="center-align">
-					<h6>UNO</h6>
+          <h6>UNO</h6>
+        </div>
+        <div>
+					<a href="#popupn" class="modal-trigger"><img class="responsive-img hoverable" src="arduino uno.jpg"></a>
 				</div>
+				
+
+        <div class="center-align info">
+        <a href="#" class="btn indigo lighten-2" >info</a>
+          <div class="modal" id="popupn">
+            <div class="modal-content">
+             
+
+              <div class="modal-footer">
+                <a href="#" class="btn red-text white btn-small modal-close"><i class="material-icons">close</i></a>
+              </div>
+              <div class="row">
+                <div class="col s4 m4 l4 xl4 ">
+                  <div>
+                    <img class="responsive-img" src="arduino uno.jpg" style="border: 1px solid black;">
+                  </div>
+                  <div>
+                    <h5>UNO</h5>
+                  </div>
+                </div>
+                 <div class="col s8 m8 l8 xl8"> 
+                  <div style="margin: 0px 0px 25px 0px;">
+                    <h5>Discription</h5><hr>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteu lorem r sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#" class="btn indigo left">Data Sheet</a>
+                      <a href="#" class="btn indigo"> issue</a>
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
 			</div>
      		<div class="col s6 m3 l3 xl3 list">
-     			<div>
-     				<img class="responsive-img hoverable" src="arduino mega.jpg">
-     			</div>
      			<div class="center-align">
-     				<h6>Mega</h6>
+            <h6>Mega</h6>
+          </div>
+          <div>
+     				<a href="#popupo" class="modal-trigger"><img class="responsive-img hoverable" src="arduino mega.jpg"></a>
      			</div>
+     			
+
+        <div class="center-align info">
+        <a href="#" class="btn indigo lighten-2" >info</a>
+          <div class="modal" id="popupo">
+            <div class="modal-content">
+             
+
+              <div class="modal-footer">
+                <a href="#" class="btn red-text white btn-small modal-close"><i class="material-icons">close</i></a>
+              </div>
+              <div class="row">
+                <div class="col s4 m4 l4 xl4 ">
+                  <div>
+                    <img class="responsive-img" src="arduino mega.jpg" style="border: 1px solid black;">
+                  </div>
+                  <div>
+                    <h5>Mega</h5>
+                  </div>
+                </div>
+                 <div class="col s8 m8 l8 xl8"> 
+                  <div style="margin: 0px 0px 25px 0px;">
+                    <h5>Discription</h5><hr>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteu lorem r sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#" class="btn indigo left">Data Sheet</a>
+                      <a href="#" class="btn indigo"> issue</a>
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
      		</div>
      		<div class="col s6 m3 l3 xl3 list">
-     			<div>
-     				<img class="responsive-img hoverable" src="arduino pi.jpg">
-     			</div>
      			<div class="center-align">
-     				<h6>Arduino Pi</h6>
+            <h6>Arduino Pi</h6>
+          </div>
+          <div>
+     				<a href="#popupp" class="modal-trigger"><img class="responsive-img hoverable" src="arduino pi.jpg"></a>
      			</div>
+     			
+
+        <div class="center-align info">
+        <a href="#" class="btn indigo lighten-2" >info</a>
+          <div class="modal" id="popupp">
+            <div class="modal-content">
+             
+
+              <div class="modal-footer">
+                <a href="#" class="btn red-text white btn-small modal-close"><i class="material-icons">close</i></a>
+              </div>
+              <div class="row">
+                <div class="col s4 m4 l4 xl4 ">
+                  <div>
+                    <img class="responsive-img" src="arduino pi.jpg" style="border: 1px solid black;">
+                  </div>
+                  <div>
+                    <h5>Pi</h5>
+                  </div>
+                </div>
+                 <div class="col s8 m8 l8 xl8"> 
+                  <div style="margin: 0px 0px 25px 0px;">
+                    <h5>Discription</h5><hr>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  temporincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteu lorem r sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </div>
+                  </div>
+                  <div class="modal-footer">
+                    <a href="#" class="btn indigo left">Data Sheet</a>
+                      <a href="#" class="btn indigo"> issue</a>
+                  </div>
+                
+              </div>
+            </div>
+          </div>
+        </div>
      	</div>
      </div>
  </div>
 
-    <footer class="page-footer">
+    <footer class="page-footer indigo">
      <div class="container">
        <div class="row">
          <div class="col l6 s12">
-           <h5 class="white-text">Contact<i class="material-icons">contacts</i></h5>
+           <h5 class="white-text">Contact&nbsp&nbsp<i class="material-icons">contacts</i></h5>
            <p class="grey-text text-lighten-4">For any kind of querry you can contact us </p>
          </div>
          <div class="col l4 offset-l2 s12">
            <ul>
              <li><a class="grey-text text-lighten-3">Contact NO.:1234567890</a></li>
-             <li><a class="grey-text text-lighten-3" ></a>facebook:<i class="material-icons">facebool</i></li>
-             <li><a class="grey-text text-lighten-3"></a>whatsapp:<i class="material-icons">call</i></li>
-             <li><a class="grey-text text-lighten-3"></a>Email:<i class="material-icons">mail</i></li>
+             <li><a class="grey-text text-lighten-3" ></a>facebook:&nbsp &nbsp <i class="material-icons ">facebool</i></li>
+             <li><a class="grey-text text-lighten-3"></a>whatsapp:&nbsp &nbsp<i class="material-icons">call</i></li>
+             <li><a class="grey-text text-lighten-3"></a>Email: &nbsp &nbsp<i class="material-icons">mail</i></li>
            </ul>
          </div>
        </div>
      </div>
        <div class="footer-copyright">
             <div class="container">
-             <a class="grey-text text-lighten-4 left-align" href="#!">© 2014 Copyright Text</a>
+             <a class="grey-text text-lighten-4 left-align" href="#!">Robotics lab website made by us </a>
             <a class="grey-text text-lighten-4 right" href="#!">Terms of use </a>
             <a class="grey-text text-lighten-4 right" href="#!">Private Policy &nbsp &nbsp &nbsp &nbsp</a>
             </div>
@@ -272,8 +940,15 @@
                        $(".dropdown-button").dropdown();
                   })
               </script>
-              <script>  
-         
-</script>
+              <script>
+                $(document).ready(function(){
+                $('.modal').modal();
+                  });
+              </script>
+              <script>
+                $(document).ready(function(){
+                  $('.slider').slider();
+                });
+              </script>
 </body>
 </html>
